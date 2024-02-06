@@ -1,0 +1,53 @@
+#all_sponsors {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; /* Center the grid */
+}
+
+#sponsors {
+    width: 100%; /* Make the title full width */
+    text-align: center; /* Center the text */
+    font-size: 3rem; /* Adjust the font size for smaller screens */
+    margin-bottom: 20px; /* Add some space below the title */
+    color: linear-gradient(180deg, #FCF6D1 0%, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
+    width: 324px;
+    height: 58px;
+    top: 949px;
+    left: 558px;
+    
+}
+
+#grid-item {
+    border: 1px solid;
+    border-color: linear-gradient(180deg, #FCF6D1 0%, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
+    width: 100%; /* Make grid items full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Adjust padding for smaller screens */
+    border-radius: 12px; /* Adjust border-radius for smaller screens */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+#sponsor_arena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px; /* Add some padding around the container */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    #all_sponsors {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    #grid-item {
+        padding: 8px; /* Adjust padding for smaller screens */
+        border-radius: 8px; /* Adjust border-radius for smaller screens */
+    }
+}
