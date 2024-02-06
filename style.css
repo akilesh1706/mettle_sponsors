@@ -1,53 +1,67 @@
-#all_sponsors {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto; /* Center the grid */
+body {
+    background-color: black;
+    margin: 0; /* Remove default body margin */
 }
 
-#sponsors {
-    width: 100%; /* Make the title full width */
-    text-align: center; /* Center the text */
-    font-size: 3rem; /* Adjust the font size for smaller screens */
-    margin-bottom: 20px; /* Add some space below the title */
-    color: linear-gradient(180deg, #FCF6D1 0%, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
-    width: 324px;
-    height: 58px;
-    top: 949px;
-    left: 558px;
-    
+p {
+    font-family: Outfit;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 82px;
+    letter-spacing: 0em;
+    text-align: center;
+    background: linear-gradient(0deg, #FFF0DA 1.04%, #94641E 4.17%, #FFF2DB 82.81%, #EAC885 93.75%, #FBF5D1 97.92%, #BD9A4B 99.99%, #ECD8A3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#img {
+    height: 84px;
+    width: 126px;
+}
+
+#grid12 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default to 1 column for larger screens */
+    gap: 20px;
+    justify-content: center;
 }
 
 #grid-item {
-    border: 1px solid;
-    border-color: linear-gradient(180deg, #FCF6D1 0%, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
-    width: 100%; /* Make grid items full width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 10px; /* Adjust padding for smaller screens */
-    border-radius: 12px; /* Adjust border-radius for smaller screens */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-#sponsor_arena {
+    height: 128px;
+    width: 192px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 20px; /* Add some padding around the container */
+    border: 2px solid;
+    border-image: linear-gradient(180deg, #FCF6D1 0%, #BD9457 10.42%, #E3CA89 25%, #FEE8C8 69.79%, #4D3A1A 85.42%, #FCF0D1 100%);
+    border-image-slice: 1;
+    border-radius: 8px;
+    background-color: rgb(38, 34, 34);
+    box-shadow: 2px 4px 16px 0px #BD8E8E40;
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 768px) {
-    #all_sponsors {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
+#main_div_sponsor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 
-    #grid-item {
-        padding: 8px; /* Adjust padding for smaller screens */
-        border-radius: 8px; /* Adjust border-radius for smaller screens */
+@media screen and (min-width: 600px) {
+    #grid12 {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for screens wider than 600px */
+        grid-template-rows: repeat(2, 1fr); /* 2 rows for screens wider than 600px */
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #grid12 {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for screens wider than 900px */
+        grid-template-rows: repeat(3, 1fr); /* 3 rows for screens wider than 900px */
     }
 }
